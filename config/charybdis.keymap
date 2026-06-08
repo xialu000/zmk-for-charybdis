@@ -16,7 +16,7 @@
     quick-tap-ms = <150>;
 };
 
-&mmv_input_listener { input-processors = <&zip_xy_scaler 8 1>; };
+&mmv_input_listener { input-processors = <&zip_xy_scaler 32 1>; };
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
