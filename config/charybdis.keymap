@@ -98,40 +98,41 @@
 
         layer_0 {
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3        &kp N4     &kp N5        &kp N6     &kp N7     &kp N8     &kp N9            &kp N0    &kp BACKSPACE
-&kp TAB         &kp Q   &kp W   &kp E         &kp R      &kp T         &kp Y      &kp U      &kp I      &kp O             &kp P     &kp BSLH
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F      &kp G         &kp H      &kp J      &kp K      &kp L             &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z   &kp X   &kp C         &kp V      &kp B         &kp N      &kp M      &kp COMMA  &kp LEFT_BRACKET  &kp FSLH  &kp MINUS
-                                              &kp LEFT_ALT  &kp SPACE  &to 1    &kp LWIN   &kp SPACE
-                                                           &kp ENTER   &mkp MB1   &mkp MB2      
+&kp ESC         &kp N1  &kp N2  &kp N3  &kp N4  &kp N5          &kp N6     &kp N7         &kp N8     &kp N9      &kp N0    &kp MINUS
+&kp TAB         &kp Q   &kp W   &kp E   &kp R   &kp T           &kp Y      &kp U          &kp I      &kp O       &kp P     &kp BSLH
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D   &kp F   &kp G           &kp H      &kp J          &kp K      &kp L       &kp SEMI  &kp SQT
+&kp LCTRL       &kp Z   &kp X   &kp C   &kp V   &kp B           &kp N      &kp M          &kp COMMA  &kp PERIOD  &kp FSLH  &mo 1
+                                        &mo 1   &kp LEFT_GUI    &mkp LCLK  &kp ENTER      &kp SPACE
+                                                &kp LEFT_ALT    &mkp RCLK  &kp BACKSPACE
             >;
 
             sensor-bindings =
                 <&scroll_vertical_encoder>,
-                // 编码器1：上下滚动,
+                // 编码器1：上下滚动,,
                 <&scroll_horizontal_encoder>;
-  // 编码器2：左右滚动
+
+            // 编码器2：左右滚动
         };
 
         layer_1 {
             bindings = <
-&kp F1          &kp F2  &kp F3  &kp F4        &kp F5      &kp F6             &kp F7     &kp F8    &kp F9      &kp F10            &kp F11  &kp F12
-&kp CAPS        &none   &none   &none         &none       &none              &none      &none     &kp UP      &none              &none    &none
-&kp LEFT_SHIFT  &none   &none   &none         &bt BT_NXT  &bt BT_CLR         &none      &kp LEFT  &kp DOWN    &kp RIGHT          &none    &none
-&kp LCTRL       &none   &none   &none         &none       &none    &none      &none     &kp PERIOD  &kp RIGHT_BRACKET  &none    &kp EQUAL
-                                                 &kp LEFT_ALT  &kp SPACE   &to 0         &none      &none
-                                                               &kp ENTER   &mkp MB1    &mkp MB2           
+&trans  &trans        &trans           &trans    &trans       &trans    &trans  &trans    &trans     &kp LBKT  &kp RBKT  &kp EQUAL
+&to 2   &trans        &trans           &trans    &trans       &trans    &trans  &trans    &trans     &trans    &trans    &caps_word
+&trans  &trans        &kp LC(LS(TAB))  &kp UP    &kp LC(TAB)  &trans    &trans  &trans    &kp PG_UP  &trans    &trans    &kp GRAVE
+&trans  &kp LEFT_ALT  &kp LEFT         &kp DOWN  &kp RIGHT    &trans    &trans  &kp HOME  &kp PG_DN  &kp END   &trans    &trans
+                                                 &trans       &trans    &trans  &trans    &trans
+                                                              &trans    &trans  &trans
             >;
         };
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+&to 0   &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mo 1   &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                      &trans     &trans    &trans  &trans  &trans
+                                                 &trans    &trans  &trans
             >;
         };
 
@@ -141,8 +142,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+                                &trans  &trans    &trans  &trans  &trans
+                                        &trans    &trans  &trans
             >;
         };
 
@@ -152,8 +153,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+                                &trans  &trans    &trans  &trans  &trans
+                                        &trans    &trans  &trans
             >;
         };
 
@@ -163,8 +164,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+                                &trans  &trans    &trans  &trans  &trans
+                                        &trans    &trans  &trans
             >;
         };
 
@@ -174,8 +175,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+                                &trans  &trans    &trans  &trans  &trans
+                                        &trans    &trans  &trans
             >;
         };
 
@@ -185,8 +186,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+                                &trans  &trans    &trans  &trans  &trans
+                                        &trans    &trans  &trans
             >;
         };
 
@@ -196,8 +197,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+                                &trans  &trans    &trans  &trans  &trans
+                                        &trans    &trans  &trans
             >;
         };
 
@@ -207,8 +208,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+                                &trans  &trans    &trans  &trans  &trans
+                                        &trans    &trans  &trans
             >;
         };
 
@@ -218,8 +219,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+                                &trans  &trans    &trans  &trans  &trans
+                                        &trans    &trans  &trans
             >;
         };
 
@@ -232,8 +233,8 @@
                                    &none         &none         &none         &none         &none
                                                  &none         &none         &none
             >;
-       
-            
+
+
         };
 
        Mouse {
@@ -246,7 +247,7 @@
                                                        &none      &trans        &trans
             >;
 
-            
+
         };
 
         layer_4 {
@@ -258,9 +259,9 @@
                            &trans     &mkp LCLK  &mkp RCLK    &mkp RCLK  &mkp LCLK
                                       &trans     &trans       &trans
             >;
-                
-                
-               
+
+
+
         };
 
         layer_5 {
@@ -272,8 +273,9 @@
                            &trans     &mkp LCLK  &mkp RCLK    &mkp RCLK  &mkp LCLK
                                       &trans     &trans       &trans
             >;
-                
-                
+
+
         };*/
     };
 };
+
